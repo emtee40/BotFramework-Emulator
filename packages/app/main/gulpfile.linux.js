@@ -15,7 +15,11 @@ gulp.task('package', async () => {
 
   // create build artifacts
   const filenames = await builder.build({
-    targets: builder.Platform.LINUX.createTarget(['deb', 'AppImage'], builder.Arch.ia32),
+    targets: builder.Platform.LINUX.createTarget(
+      ['AppImage'],
+      builder.Arch.ia32,
+      builder.Arch.x64
+    ),
     config
   });
 
