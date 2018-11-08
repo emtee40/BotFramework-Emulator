@@ -23,7 +23,7 @@ async function stageAndRedist() {
   // create installers
   const filenames = await builder.build({
     targets: builder.Platform.MAC.createTarget(['zip', 'dmg']),
-    config2,
+    config: config2,
     prepackaged: '../dist/mac',
     projectDir: path.resolve('.')
   });
