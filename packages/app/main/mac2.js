@@ -26,8 +26,8 @@ async function stage() {
 
 /** Creates the emulator installers */
 async function redist() {
-  const { getConfig, getReleaseFilename } = common;
-  const rename = require('gulp-rename');
+  const { getConfig } = common;
+  // const rename = require('gulp-rename');
   const builder = require('electron-builder');
   const config = getConfig('mac');
 
